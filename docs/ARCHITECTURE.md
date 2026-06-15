@@ -131,3 +131,10 @@ The future server should emit one canonical JSON log line per request with:
 
 Audit logs are product records. Application logs are operational records. Do not
 use one as a substitute for the other.
+
+
+# Architecture document routing 
+This file describes the harness-level architecture discovery process. 
+For the actual product architecture of this stock clustering dashboard, read: 
+- `docs/product/ARCHITECTURE.md` 
+Coding agents should not read this file during normal implementation unless the assigned story is about harness maintenance or architecture discovery.

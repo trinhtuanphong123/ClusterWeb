@@ -1,33 +1,19 @@
-# Test Matrix
-
-This file maps product behavior to proof.
-
-No product behavior has been defined or implemented yet. Do not mark a row
-implemented until tests or validation evidence exist.
-
-## Status Values
-
-| Status | Meaning |
-| --- | --- |
-| planned | Accepted as intended behavior, not implemented |
-| in_progress | Actively being built |
-| implemented | Implemented and proof exists |
-| changed | Contract changed after earlier implementation |
-| retired | No longer part of the product contract |
-
-## Matrix
-
-| Story | Contract | Unit | Integration | E2E | Platform | Status | Evidence |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| TBD | Add rows when story packets are created | no | no | no | no | planned | none |
-
-## Evidence Rules
-
-- Unit proof covers pure domain and application rules.
-- Integration proof covers backend enforcement, data integrity, provider
-  behavior, jobs, or service contracts.
-- E2E proof covers user-visible browser flows.
-- Platform proof covers only shell, deployment, mobile, desktop, or runtime
-  behavior that cannot be proven in lower layers.
-- A story can be implemented without every proof column if the story packet
-  explains why.
+# TEST_MATRIX.md 
+This is the validation index. Do not read every validation file by default. 
+Read only the validation file related to the assigned story. 
+## Validation files 
+| Area | File | 
+|---|---| 
+| Backend API | `docs/test-matrix/backend.md` | 
+| Frontend dashboard | `docs/test-matrix/frontend.md` | 
+| Data pipeline | `docs/test-matrix/pipeline.md` | 
+| Database / Supabase | `docs/test-matrix/database.md` | 
+| Deployment | `docs/test-matrix/deployment.md` | 
+## Default proof rule 
+Every story must provide at least one of: 
+- command run 
+- test/lint/build output 
+- migration check 
+- health check 
+- manual verification step 
+If proof cannot be run, state why and provide the exact command for the human to run.
