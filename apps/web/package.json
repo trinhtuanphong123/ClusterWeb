@@ -1,0 +1,7 @@
+{
+  "name": "cluster-dashboard-web",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Vietnamese Stock Behavior Clustering Dashboard — frontend placeholder",
+  "scripts": {}
+}

@@ -1,16 +1,61 @@
-# Harness durable layer — each project instance generates its own data.
+# =============================================================================
+# Vietnamese Stock Clustering Dashboard — .gitignore
+# =============================================================================
+
+# --- Harness durable layer ---
 harness.db
 harness.db-wal
 harness.db-shm
 
-# Rust build output for harness tooling.
+# --- Rust build output ---
 target/
 dist/
 
-# Downloaded Harness CLI binary for installed project instances.
+# --- Harness CLI binary (downloaded per-project) ---
 scripts/bin/harness-cli
 scripts/bin/harness-cli.exe
 
-
+# --- Environment ---
 .env
+.env.local
+.env.*.local
 
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+.eggs/
+*.whl
+.venv/
+venv/
+env/
+.python-version
+*.pyo
+pip-log.txt
+
+# --- Node.js / Next.js ---
+node_modules/
+.next/
+out/
+.vercel
+
+# --- IDE ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# --- Build artifacts ---
+build/
+*.log
+
+# --- AWS / Infra ---
+*.pem
+*.tfstate
+*.tfstate.backup
+.terraform/
