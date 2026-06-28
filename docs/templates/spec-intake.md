@@ -14,6 +14,17 @@ Where did the spec come from?
 
 What product are we building, for whom, and why?
 
+## Intake Classification
+
+Type:
+- new spec | spec slice | change request | maintenance | high-risk change
+
+Suggested lane:
+- tiny | normal | high-risk
+
+Reason:
+- ...
+
 ## Candidate Product Docs
 
 List the product contract files that should be created under `docs/product/`.
@@ -30,6 +41,14 @@ packet yet.
 | Epic | Description | Status |
 | --- | --- | --- |
 | E01 | | unsliced |
+
+## Story Readiness
+
+Track which candidate stories are actually executable. Do not mark everything `ready`.
+
+| Candidate story | Readiness | Blocker |
+| --- | --- | --- |
+| ... | draft / ready / blocked | ... |
 
 ## Architecture Questions
 

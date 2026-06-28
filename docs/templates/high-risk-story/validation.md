@@ -4,6 +4,22 @@
 
 Explain what must pass before the story is done.
 
+## Required Proof Before Execution
+
+- Pre-conditions/checks that must hold before any change is made.
+
+## Required Proof After Execution
+
+- Checks that must pass to consider the story done.
+
+## Mock vs Real Validation
+
+Mock validation:
+- ...
+
+Real/dev validation:
+- ...
+
 ## Test Plan
 
 | Layer | Cases |
@@ -14,6 +30,16 @@ Explain what must pass before the story is done.
 | Platform | |
 | Performance | |
 | Logs/Audit | |
+
+## Non-Regression Checks
+
+- What previously-working behavior must be confirmed still works.
+
+## Safety Checks
+
+- No secrets exposed (client bundle, logs, responses).
+- No production DB writes unless explicitly allowed.
+- No schema drift outside the approved migration.
 
 ## Fixtures
 

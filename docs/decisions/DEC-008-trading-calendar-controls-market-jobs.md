@@ -31,3 +31,10 @@ Use a **`trading_calendar`** table (or equivalent calendar logic) as the single 
 - **Cron with hardcoded weekday rules** — cannot express market holidays correctly; rejected.
 - **External calendar service** — adds a dependency for data that is small and stable enough to store locally; rejected.
 - **Always run, filter later** — wastes compute and risks publishing snapshots for non-trading days; rejected.
+
+
+## Related decisions
+
+- DEC-002 — the worker whose jobs this calendar gates.
+- DEC-006 — the hourly refresh gated by trading days/hours.
+- DEC-009 — official clustering runs only on valid trading-day data.

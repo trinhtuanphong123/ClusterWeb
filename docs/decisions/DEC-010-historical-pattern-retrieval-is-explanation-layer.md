@@ -30,3 +30,7 @@ Historical pattern retrieval (and the outcome analysis built on it) is the **exp
 - **Treat retrieval as a predictor** — contradicts the project's non-prediction stance and the non-stationarity of prices; rejected.
 - **Drop historical retrieval entirely** — clusters would be less interpretable and harder to validate; rejected.
 - **Make retrieval a standalone "find similar charts" product** — fragments the product identity and detaches it from the clustering purpose; rejected.
+
+## Related decisions
+
+- DEC-009 — the current behavior clustering that retrieval explains and validates.

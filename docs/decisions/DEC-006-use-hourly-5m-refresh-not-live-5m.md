@@ -29,3 +29,9 @@ Refresh the intraday 5-minute state **hourly** during trading hours. **Remove li
 
 - **Live 5-minute ingestion every 5 minutes** — higher cost, more rate-limit pressure, more operational complexity, and unnecessary for analytics; rejected for MVP.
 - **No intraday view at all** — loses useful current-state context that hourly refresh cheaply provides; rejected.
+
+
+## Related decisions
+
+- DEC-008 — trading-calendar/trading-hours gating for the hourly refresh.
+- DEC-009 — clustering uses daily data; intraday 5-minute is current-state only.

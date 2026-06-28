@@ -30,3 +30,10 @@ Run the worker (Python scheduler + all pipelines) on an **AWS EC2** instance as 
 - **AWS Lambda** — execution time/memory limits and cold starts make heavy ML jobs impractical; excluded by MVP constraint; rejected.
 - **ECS/EKS** — container orchestration is overkill for a single worker process in the MVP; excluded by constraint; rejected.
 - **Airflow** — a full orchestration platform is heavier than needed; a simple in-process scheduler with calendar gating suffices; rejected.
+
+
+## Related decisions
+
+- DEC-003 — the database the worker writes to.
+- DEC-007 — one-EC2 / two-EC2 modes that place this worker.
+- DEC-008 — trading-calendar gating that controls when worker jobs run.

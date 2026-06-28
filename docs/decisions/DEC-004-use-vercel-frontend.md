@@ -30,3 +30,9 @@ Build the frontend in **Next.js** and deploy it on **Vercel**, reading data from
 - **Static site hosted on the same EC2** — adds web-serving responsibility to EC2 and loses Vercel's preview/rollback ergonomics; rejected.
 - **Server-rendered app co-located with FastAPI** — couples UI and API lifecycles and increases EC2 load; rejected.
 - **Other SPA frameworks without managed hosting** — more setup for no clear benefit over Next.js/Vercel; rejected.
+
+
+## Related decisions
+
+- DEC-001 — the FastAPI API this frontend consumes.
+- DEC-011 — browser-safe config and the no-DB-credentials rule for the frontend.

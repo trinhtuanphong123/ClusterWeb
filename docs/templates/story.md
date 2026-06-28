@@ -1,3 +1,5 @@
+> **Deprecated:** use `docs/templates/story-template.md` for new harness story packets. This file is kept as the legacy story format for reference only.
+
 # US-XXX Story Title
 
 ## Status

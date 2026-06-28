@@ -30,3 +30,10 @@ Use **Supabase Postgres** as the primary database for all structured data and pu
 - **Self-managed Postgres on EC2** — more ops burden (backups, patching, HA) for no MVP benefit; rejected.
 - **Redshift / data warehouse** — excluded by constraints and oversized for this workload; rejected.
 - **NoSQL store** — the data is relational and benefits from SQL joins and constraints; rejected.
+
+
+## Related decisions
+
+- DEC-001 — the FastAPI API that reads this database.
+- DEC-002 — the worker that writes to this database.
+- DEC-011 — read vs read/write credential boundary for this database.

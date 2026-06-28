@@ -29,3 +29,9 @@ Adopt a **lean harness mode**: a minimal, intentionally small operational footpr
 
 - **Full enterprise stack (Airflow + ECS/EKS + Kafka + Redshift)** — high complexity and cost for an MVP with modest, batchy workloads; rejected.
 - **Serverless-first** — poor fit for always-on scheduling and heavy stateful ML jobs; rejected.
+
+
+## Related decisions
+
+- DEC-001, DEC-002, DEC-003, DEC-004 — the minimal component set this lean mode comprises.
+- DEC-007 — the one-EC2 / two-EC2 topology that keeps the lean footprint scalable.

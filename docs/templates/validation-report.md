@@ -2,9 +2,27 @@
 
 Date: YYYY-MM-DD
 
+## Summary
+
+Result: pass | partial | fail | not run
+
+One-line outcome statement.
+
+## Story
+
+- Story ID:
+- Story title:
+
 ## Scope
 
 What story or change was validated?
+
+## Environment
+
+- Local / dev / staging / production:
+- OS:
+- Runtime versions:
+- Database target, if any:
 
 ## Commands Run
 
@@ -23,10 +41,18 @@ command
 | Platform | not run | Command does not exist yet |
 | Release | not run | Command does not exist yet |
 
+## Not Run
+
+List checks that were intentionally not run and why.
+
 ## Evidence
 
 Add report paths, screenshots, logs, or other artifacts.
 
 ## Gaps
 
-List remaining risk or missing harness capability.
+List remaining missing harness capability or coverage gaps.
+
+## Remaining Risk
+
+- ...

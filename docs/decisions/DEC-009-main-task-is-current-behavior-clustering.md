@@ -30,3 +30,10 @@ The **primary task is current behavior clustering**: at time `T`, over stock uni
 - **Price prediction model** — out of scope by design; misrepresents what is achievable and invites misuse; rejected.
 - **Buy/sell recommendation system** — explicitly a non-goal; carries advisory liability and contradicts the analytics framing; rejected.
 - **Per-stock charting tool only** — fails to deliver the cross-sectional "who moves alike" insight that is the project's purpose; rejected.
+
+
+## Related decisions
+
+- DEC-006 — intraday 5-minute is current-state only, not a clustering input.
+- DEC-008 — trading-calendar gating for official clustering runs.
+- DEC-010 — historical retrieval as the explanation layer for clusters.
