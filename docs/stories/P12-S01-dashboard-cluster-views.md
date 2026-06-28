@@ -6,6 +6,10 @@ normal
 ## Goal
 Build the dashboard views for current behavior clusters (overview + cluster list/detail) reading from the API, with loading/error/staleness states. Reads the latest valid snapshot on non-trading days.
 
+## Prerequisites
+- P6-S01 web shell completed.
+- P11-S01 dashboard API endpoints available, or this story is explicitly converted to a mock-driven UI story.
+
 ## Read only
 - `AGENTS.md`
 - `docs/CONTEXT_INDEX.md`
@@ -27,6 +31,7 @@ Build the dashboard views for current behavior clusters (overview + cluster list
 - Loading, error, and staleness indicators present; on non-trading days shows the latest valid snapshot labeled as such.
 - Outputs framed as descriptive behavior clusters; no prediction or buy/sell language.
 - No secrets exposed to the client.
+- If API is unavailable, mock mode must be explicit and visually labeled as mock/dev data.
 
 ## Verification
 See `docs/test-matrix/frontend.md`:

@@ -6,6 +6,11 @@ normal
 ## Goal
 Detect whether behaviorally similar stocks move together or with delay (lagged/cross-correlation, optional DTW alignment) over a lag range (e.g., -10..+10 trading days) and write directed edges to `lead_lag_edges`.
 
+## Prerequisites
+- P8-S02 behavior windows completed.
+- P9-S01 clustering completed.
+- `lead_lag_edges` schema exists.
+
 ## Read only
 - `AGENTS.md`
 - `docs/CONTEXT_INDEX.md`
@@ -25,6 +30,10 @@ Detect whether behaviorally similar stocks move together or with delay (lagged/c
 - Computes lead/lag over the defined lag range; records `leader`, `follower`, `lag`, `strength`, `scope` in `lead_lag_edges`, versioned by run_id.
 - Runs after clustering; calendar-gated.
 - Presented as descriptive context supporting cluster interpretation; not a signal; no buy/sell output.
+- Lag range must be configurable.
+- Directed edges must be versioned by run_id.
+- Output must be descriptive only, not a trading signal.
+
 
 ## Verification
 See `docs/test-matrix/modeling.md`:

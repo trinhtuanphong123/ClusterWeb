@@ -12,6 +12,12 @@ Create the Next.js dashboard shell deployable on Vercel that reads `NEXT_PUBLIC_
 - `docs/product/UI_SPEC.md`
 - `docs/product/DESIGN_SYSTEM.md`
 - `docs/product/API_CONTRACT.md`
+- `docs/decisions/DEC-004-use-vercel-frontend.md`
+
+## Prerequisites
+- P1-S01 scaffold completed.
+- `apps/web/` exists.
+
 
 ## Modify only
 - `apps/web/` (app shell, layout, a single placeholder page)
@@ -27,6 +33,8 @@ Create the Next.js dashboard shell deployable on Vercel that reads `NEXT_PUBLIC_
 - Loading and error states exist; mock fallback when API is unset.
 - Only `NEXT_PUBLIC_*` config exposed to the client; no secrets.
 - No buy/sell or prediction language anywhere in the shell.
+- The shell must work with API unset by using mock fallback.
+- The browser bundle must not include non-`NEXT_PUBLIC_*` environment variables.
 
 ## Verification
 See `docs/test-matrix/frontend.md`:

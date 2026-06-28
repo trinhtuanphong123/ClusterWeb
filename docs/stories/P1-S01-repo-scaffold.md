@@ -19,12 +19,17 @@ Create the repository folder structure and placeholders for all subsystems (apps
 - `pipelines/` (placeholder packages)
 - `supabase/` (placeholder)
 - `infra/` (placeholder)
-- `scripts/` (placeholder)
+- `scripts/` placeholder files only; do not modify `scripts/bin/harness-cli.exe`
+
+# Alternative Windows PowerShell verification:
+
+- Get-ChildItem -Path apps, services, pipelines, supabase, infra, scripts -Recurse -Depth 2 -Directory | Sort-Object FullName
 
 ## Do not touch
 - `docs/decisions/`
 - any product modeling/spec docs not listed above
 - the harness CLI or `docs/HARNESS*`
+- `scripts/bin/harness-cli.exe`
 
 ## Acceptance criteria
 - Folder structure exists for frontend, backend, worker/pipelines, supabase, infra, scripts.

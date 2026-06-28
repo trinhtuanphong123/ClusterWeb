@@ -6,6 +6,13 @@ high-risk
 ## Goal
 Implement the daily incremental ingestion that fetches and upserts daily OHLCV after market close on trading days (the official data track).
 
+## Prerequisites
+- P2-S00 data source probe completed.
+- Daily bars schema exists.
+- `trading_calendar`, `pipeline_runs`, and `data_quality_reports` exist.
+- P4-S01 worker skeleton completed.
+
+
 ## Read only
 - `AGENTS.md`
 - `docs/CONTEXT_INDEX.md`
@@ -13,11 +20,13 @@ Implement the daily incremental ingestion that fetches and upserts daily OHLCV a
 - `docs/product/DATABASE_SCHEMA.md`
 - `docs/product/INGESTION_STRATEGY.md`
 - `docs/product/SCHEDULER_STRATEGY.md`
+- `docs/decisions/DEC-008-trading-calendar-controls-market-jobs.md`
 
 ## Modify only
 - `pipelines/ingestion/daily.py`
 - `pipelines/jobs/daily_incremental.py`
 - `pipelines/common/` (high-water-mark + upsert helpers)
+
 
 ## Do not touch
 - intraday ingestion (P7-S01)
@@ -29,6 +38,8 @@ Implement the daily incremental ingestion that fetches and upserts daily OHLCV a
 - Determines per-ticker high-water mark and fetches only newer bars.
 - Idempotent upsert on `(ticker,bar_date,source)`.
 - Data-quality checks recorded in `data_quality_reports`; status in `pipeline_runs`.
+- Mock mode must run without provider credentials.
+- If provider credentials or network are unavailable, the job reports a controlled failure and does not fabricate data.
 
 ## Verification
 See `docs/test-matrix/pipeline.md`. Mock run:

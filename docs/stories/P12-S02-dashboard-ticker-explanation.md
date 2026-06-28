@@ -6,6 +6,12 @@ normal
 ## Goal
 Build the per-ticker view showing cluster membership, neighbors, historical pattern matches, outcome context, and current-state, reading from the API. Explanation-focused, descriptive only.
 
+## Prerequisites
+- P6-S01 web shell completed.
+- P11-S01 dashboard API integration completed.
+- Historical pattern and outcome endpoints exist, or this story uses explicitly labeled mock data.
+
+
 ## Read only
 - `AGENTS.md`
 - `docs/CONTEXT_INDEX.md`
@@ -28,6 +34,9 @@ Build the per-ticker view showing cluster membership, neighbors, historical patt
 - Loading/error/staleness states present; latest valid snapshot on non-trading days with `is_stale` shown.
 - Intraday current-state labeled as a periodic (hourly) snapshot, not live.
 - No secrets exposed to the client.
+- Historical matches and outcomes must be labeled as descriptive context.
+- Intraday state must be labeled as hourly/periodic, not live.
+- No forecast, recommendation, buy/sell, or signal language.
 
 ## Verification
 See `docs/test-matrix/frontend.md`:
